@@ -18,16 +18,6 @@ Prepared Statement:
  Actualizar la información de un estudiante.
  Eliminar el registro de un estudiante.
 
-1. Realizar la conexión con Base de Datos, utilizando la clase Pool y definiendo un máximo de 20
-clientes, 5 segundos como tiempo máximo de inactividad de un cliente y 2 segundos de espera de un
-nuevo cliente.
-2. Hacer todas las consultas con un JSON como argumento definiendo la propiedad name para el Prepared
-Statement.
-3. Hacer las consultas con texto parametrizado.
-4. Liberar a un cliente al concluir su consulta.
-5. Capturar los posibles errores en todas las consultas.
-6. Retornar por consola un mensaje de error en caso de haber problemas de conexión.
-7. Obtener el registro de los estudiantes registrados en formato de arreglos.
 
 <br>
 
@@ -42,7 +32,10 @@ Statement.
    npm install
 
 4. Abrir el archivo html ingresando al https://localhost:3000
-5. Para insertar colocar en la consola:  node insertar.js 04 'prueba1' '44444444-4' '4' '4'
+5. Para Insertar colocar en la consola: node index.js nuevo 07 'Loreto7' '666666-7' '7' '7'
+6. Para Editar colocar en la consola: node index.js editar 6 'LoretoGodoy' '666666-6' '3' '3'
+7. Para Consultar colocar en la consola: node index.js consulta
+
 
 <br>
 
@@ -88,9 +81,16 @@ Statement.
 
 ✨ Con nuestra aplicacion puedes:
 
-1. Funcionalidad : Agregar personas(roommates) de forma aleatoria
-2. Funcionalidad : Agregar Gastos y Descripcion de los mismos y guardarlos en un archivo .json
-3. Funcionalidad : Calcular los que deben y lo que reciben cada uno de los roommates 
+1. Realizar la conexión con Base de Datos, utilizando la clase Pool y definiendo un máximo de 20
+clientes, 5 segundos como tiempo máximo de inactividad de un cliente y 2 segundos de espera de un
+nuevo cliente.
+2. Hacer todas las consultas con un JSON como argumento definiendo la propiedad name para el Prepared
+Statement.
+3. Hacer las consultas con texto parametrizado.
+4. Liberar a un cliente al concluir su consulta.
+5. Capturar los posibles errores en todas las consultas.
+6. Retornar por consola un mensaje de error en caso de haber problemas de conexión.
+7. Obtener el registro de los estudiantes registrados en formato de arreglos.
 
 
 <!-- ![Foto de grupo](public/images/grupoVerde.jpg) -->

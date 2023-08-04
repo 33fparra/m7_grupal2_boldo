@@ -1,3 +1,5 @@
+//falta tirarlo como arreglo
+
 import pkg from 'pg';  //no me funciono cono el { Pool } decia que era de la version CommonJs 
 const { Pool } = pkg;
 
@@ -13,12 +15,12 @@ const pool = new Pool({
   connectionTimeoutMillis: 2000, // 2 segundos de espera
 });
 
-// Función para realizar consultas
-async function queryDatabase(queryText, queryParams) {
-  const client = await pool.connect();
+// Función para realizar consultas / querText toma la consulta de SQL a ejecuar / queryParams es un array con los valores que se van a insertar
+async function queryDatabase(queryText, queryParams) {  
+  const client = await pool.connect(); // creamos la conexion
 
   try {
-    // 2. Hacer todas las consultas con un JSON como argumento
+    // 2. Hacer todas las consultas con un JSON como argumento // tiene tres propiedades
     const name = 'query-name';
     const query = {
       name,
@@ -29,14 +31,16 @@ async function queryDatabase(queryText, queryParams) {
     // 3. Hacer las consultas con texto parametrizado
     const res = await client.query(query);
 
+    //res ya tiene la query, y el res.rows es prue la respuesta sea mas corta colo un segmento(lo q ue necesito)
+
     // 7. Obtener el registro de los estudiantes registrados en formato de arreglos
     return res.rows;
   } catch (err) {
     // 5. Capturar los posibles errores en todas las consultas
-    console.error(err);
+    console.error(err);   // si hay un error se registraen la consola
   } finally {
     // 4. Liberar a un cliente al concluir su consulta
-    client.release();
+    client.release(); //este no entiendo mucho que monos pinta, lo repsare, l oestoy colocando solo de forma automatica
   }
 }
 
