@@ -26,6 +26,7 @@ async function queryDatabase(queryText, queryParams) {
       name,
       text: queryText,
       values: queryParams,
+      rowMode: "array"
     };
 
     // 3. Hacer las consultas con texto parametrizado

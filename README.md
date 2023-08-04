@@ -3,7 +3,7 @@
 
 <br>
 
-<h2><b>Descripción del Proyecto</b> <img src = " https://media.giphy.com/media/GjhqaB166nKR4BoEnh/giphy.gif" width = 50px></h2>
+<h2><b>Descripción del Proyecto</b> <img src ="https://media.giphy.com/media/GjhqaB166nKR4BoEnh/giphy.gif" width = 50px></h2>
 
 📝 La escuela de música Always Music solicitó hacer unas pruebas con el avance del desarrollo del sistema de gestión
 con base de datos, se dieron cuenta que no se podían hacer varias consultas de forma simultánea y que, al
